@@ -363,6 +363,13 @@ fieldset {
         align-items: center;
     }
 
+    .imagenesInicio img {
+        transition: all 1s;
+    }
+
+    .imagenesInicio img:hover{
+        opacity: 0.7;
+    }
     /* pagina de recetas y productos */
     .mainPage {
         grid-template-rows: 15px 0.1fr 1fr;
