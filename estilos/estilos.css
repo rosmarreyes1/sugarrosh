@@ -10,23 +10,16 @@
 
 /* estructura en comun de todas las paginas */
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 0.1fr;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
     width: 100%;
     height: 100vh;
 }
 
 /* encabezado */
 header {
-    grid-area: header;
     background-color: rgba(0, 0, 0, 0.223);
-    text-align: center;
-    height: 160px;
+    display: flex;
+    flex-direction: column;
+    height: 165px;
 }
 
 /* titulo principal de la pagina */
@@ -42,13 +35,13 @@ h1 {
 .titulo a {
     text-decoration: none;
     color: rgb(185, 90, 122);
+    font-weight: bold;
 }
 
 /* menu principal de la pagina */
 .menu ul {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    text-align: center;
     font-size: 17px;
     list-style: none;
     gap: 15px;
@@ -63,9 +56,12 @@ h1 {
     display: none;
 }
 
+.navbar-toggler {
+    background-color: rgba(0, 0, 0, 0.636);
+}
+
 /* pie de paginas */
 footer {
-    grid-area: footer;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.625);
     font-size: 10px;
@@ -74,17 +70,6 @@ footer {
 }
 
 /* pagina de inicio */
-.mainInicio {
-    display: grid;
-    grid-template-areas:
-        "bienvenida"
-        "video"
-        "recetas"
-        "productos";
-    text-align: center;
-    gap: 20px;
-}
-
 .bodyInicio {
     background-image: url(../multimedia/imagenes/fondo\ inicio\ mobile.jpg);
     background-attachment: fixed;
@@ -95,39 +80,13 @@ footer {
     color: white;
 }
 
-.bienvenida {
-    grid-area: bienvenida;
-}
-
-.videoInicio {
-    grid-area: video;
-}
-
 iframe {
-    width: 280px;
+    width: 100%;
     height: 230px;
 }
 
-.galeriaInicioRecetas {
-    grid-area: recetas;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.galeriaInicioProductos {
-    grid-area: productos;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.imagenesInicio {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+#galeria {
+    display: none;
 }
 
 /* pagina de recetas */
@@ -215,6 +174,11 @@ fieldset {
 
 /* tablet */
 @media screen and (min-width: 768px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+    }
+
     .menu ul {
         font-size: 20px;
     }
@@ -225,28 +189,42 @@ fieldset {
     }
 
     .mainInicio {
+        display: grid;
+        grid-template-areas:
+            "bienvenida"
+            "video"
+            "recetas"
+            "productos";
+        text-align: center;
+        gap: 20px;
         padding: 15px;
     }
 
+    #carouselExampleCaptions {
+        display: none;
+    }
+    #carouselExampleIndicators{
+        display: none;
+    }
+
+    #galeria {
+        display: initial;
+    }
+
     .galeriaInicioRecetas {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        grid-area: recetas;
     }
 
     .galeriaInicioProductos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        grid-area: productos;
     }
-    
+
     .imagenesInicio {
         display: flex;
         flex-direction: row;
         gap: 10px;
     }
+
     .imagenesInicio img {
         width: 200px;
         height: 290px;
@@ -255,6 +233,14 @@ fieldset {
     iframe {
         width: 80%;
         height: 340px;
+    }
+
+    .videoInicio {
+        grid-area: video;
+    }
+
+    .bienvenida {
+        grid-area: bienvenida;
     }
 
     /* pagina de recetas tablet*/
@@ -282,12 +268,12 @@ fieldset {
         background-color: rgba(0, 0, 0, 0.311);
         font-size: 18px;
     }
-    
+
     label {
         color: black;
         font-size: 19px;
     }
-    
+
     fieldset {
         color: white;
         font-weight: lighter;
@@ -308,7 +294,7 @@ fieldset {
         padding: 15px;
     }
 
-    .descripcion{
+    .descripcion {
         padding: 10px;
         text-align: start;
     }
@@ -327,7 +313,7 @@ fieldset {
         background-color: palevioletred;
         background-size: cover;
         border-radius: 10%;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .submenu {
@@ -345,7 +331,6 @@ fieldset {
         display: block;
         background-color: rgba(0, 0, 0, 0.878);
         border-radius: 8%;
-
     }
 
     /* pagina de inicio desktop */
@@ -367,9 +352,10 @@ fieldset {
         transition: all 1s;
     }
 
-    .imagenesInicio img:hover{
+    .imagenesInicio img:hover {
         opacity: 0.7;
     }
+
     /* pagina de recetas y productos */
     .mainPage {
         grid-template-rows: 15px 0.1fr 1fr;
