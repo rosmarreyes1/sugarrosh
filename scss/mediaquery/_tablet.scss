@@ -1,0 +1,128 @@
+@media screen and (min-width: 768px) {
+
+    /*menu tablet */
+    .menu {
+        .navbar-collapse {
+            display: flex;
+            justify-content: center;
+
+            ul {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    /* pagina de inicio tablet*/
+    .bodyInicio {
+        background-image: url("../multimedia/imagenes/fondo-inicio.jpg");
+
+        .mainInicio {
+            display: grid;
+            grid-template-areas:
+                "bienvenida"
+                "video"
+                "recetas"
+                "productos";
+            text-align: center;
+            gap: 20px;
+            padding: 15px;
+
+            #carouselExampleCaptions {
+                display: none;
+            }
+
+            #carouselExampleIndicators {
+                display: none;
+            }
+
+            #galeria {
+                display: initial;
+            }
+            
+            .galeriaInicioRecetas {
+                grid-area: recetas;
+            }
+            .galeriaInicioProductos {
+                grid-area: productos;
+            }
+
+            .bienvenida {
+                grid-area: bienvenida;
+            }
+
+            .imagenesInicio {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                img {
+                    width: 200px;
+                    height: 290px;
+                }
+            }
+
+            .videoInicio {
+                grid-area: video;
+
+                iframe {
+                    width: 80%;
+                    height: 340px;
+                }
+            }
+        }
+    }
+
+
+    /* pagina de recetas tablet*/
+    .bodyRecetas {
+        background-image: url("../multimedia/imagenes/fondo-recetas.jpg");
+    }
+
+    /* pagina de productos tablet */
+
+    .bodyProductos {
+        background-image: url("../multimedia/imagenes/fondo-producto.jpg")
+    }
+
+    /* pagina de contacto tablet */
+    .bodyContacto {
+        background-image: url("../multimedia/imagenes/fondo-contacto.jpg");
+
+        .mainContacto {
+            color: $colorBody;
+            padding: 28px;
+            .pcontacto {
+                background-color: $bgDetalle;
+                font-size: 1rem;
+            }
+            fieldset {
+                color: $colorBody;
+                font-weight: lighter;
+
+                label {
+                    color: $colorFormulario;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    /* pagina de nosotros tablet */
+    .bodyNosotros {
+        background-image: url("../multimedia/imagenes/fondo-nosotros.jpg");
+
+        .mainNosotros {
+            padding: 15px;
+
+            .sectionNosotros {
+                display: flex;
+                flex-direction: row;
+                padding: 15px;
+
+                .descripcion {
+                    padding: 10px;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

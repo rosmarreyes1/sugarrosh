@@ -1,0 +1,44 @@
+
+/*titulo principal de la pagina*/
+header {
+    background-color: $bgPrincipal;
+    display: flex;
+    flex-direction: column;
+    height: 165px;
+    .titulo {
+        font-family: $fontPrincipal;
+        font-size: 4rem;
+        text-shadow: 0.7px 0px 0px $colorBordeT,
+            0px 0.7px 0px $colorBordeT,
+            -0.7px 0px 0px $colorBordeT,
+            0px -0.7px 0px $colorBordeT;
+    
+        a {
+            text-decoration: none;
+            color: $colorTitulo;
+            font-weight: bold;
+        }
+    }
+    .menu {
+        ul {
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            list-style: none;
+            gap: 15px;
+    
+            a {
+                text-decoration: none;
+                color: $colorBody;
+            }
+            .submenu {
+                display: none; 
+            }
+        }
+        .navbar-toggler {
+            background-color: $bgFooter;
+        }
+    }
+}
+
+

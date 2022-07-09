@@ -1,0 +1,24 @@
+.bodyContacto {
+    background-image: url("../multimedia/imagenes/fondo\ contactos\ mobile.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    .mainContacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $colorFormulario;
+        gap: 7px;
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: $colorFormulario;
+            font-weight: bold;
+            gap: 5px;
+        }
+    }
+}
+

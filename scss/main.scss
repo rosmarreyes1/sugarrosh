@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+@import "base/reset";
+@import "base/variable";
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+
+
+@import "views/inicio";
+@import "views/recetas";
+@import "views/productos";
+@import "views/contacto";
+@import "views/nosotros";
+
+@import "mediaquery/tablet";
+@import "mediaquery/desktop";
+
+

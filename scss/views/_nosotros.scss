@@ -1,0 +1,15 @@
+
+.bodyNosotros {
+    background-image: url("../multimedia/imagenes/fondo\ nosotros\ mobile.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .mainNosotros {
+        text-align: center;
+        .descripcion {
+            background-color: $bgDetalle;
+        }
+    }
+}
+

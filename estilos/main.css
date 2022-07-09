@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box; }
+
+/* fin del reseteo */
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  color: white; }
+
+/*titulo principal de la pagina*/
+header {
+  background-color: rgba(0, 0, 0, 0.223);
+  display: flex;
+  flex-direction: column;
+  height: 165px; }
+  header .titulo {
+    font-family: "Ms Madi", cursive;
+    font-size: 4rem;
+    text-shadow: 0.7px 0px 0px white, 0px 0.7px 0px white, -0.7px 0px 0px white, 0px -0.7px 0px white; }
+    header .titulo a {
+      text-decoration: none;
+      color: #b95a7a;
+      font-weight: bold; }
+  header .menu ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    list-style: none;
+    gap: 15px; }
+    header .menu ul a {
+      text-decoration: none;
+      color: white; }
+    header .menu ul .submenu {
+      display: none; }
+  header .menu .navbar-toggler {
+    background-color: rgba(0, 0, 0, 0.711); }
+
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.711);
+  font-size: 1rem;
+  margin-top: 10px;
+  padding-top: 10px; }
+
+.bodyInicio {
+  background-image: url("../multimedia/imagenes/fondo inicio mobile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .bodyInicio iframe {
+    width: 100%;
+    height: 230px; }
+  .bodyInicio #galeria {
+    display: none; }
+
+.bodyRecetas {
+  background-image: url("../multimedia/imagenes/fondo recetas mobile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .bodyRecetas .sectionPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; }
+    .bodyRecetas .sectionPage .detalle {
+      background-color: rgba(0, 0, 0, 0.511); }
+
+.bodyProductos {
+  background-image: url("../multimedia/imagenes/fondo productos mobile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .bodyProductos .sectionPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; }
+    .bodyProductos .sectionPage .detalle {
+      background-color: rgba(0, 0, 0, 0.511); }
+
+.bodyContacto {
+  background-image: url("../multimedia/imagenes/fondo contactos mobile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .bodyContacto .mainContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    gap: 7px; }
+    .bodyContacto .mainContacto fieldset {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: black;
+      font-weight: bold;
+      gap: 5px; }
+
+.bodyNosotros {
+  background-image: url("../multimedia/imagenes/fondo nosotros mobile.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .bodyNosotros .mainNosotros {
+    text-align: center; }
+    .bodyNosotros .mainNosotros .descripcion {
+      background-color: rgba(0, 0, 0, 0.511); }
+
+@media screen and (min-width: 768px) {
+  /*menu tablet */
+  .menu .navbar-collapse {
+    display: flex;
+    justify-content: center; }
+    .menu .navbar-collapse ul {
+      font-size: 1.2rem; }
+  /* pagina de inicio tablet*/
+  .bodyInicio {
+    background-image: url("../multimedia/imagenes/fondo-inicio.jpg"); }
+    .bodyInicio .mainInicio {
+      display: grid;
+      grid-template-areas: "bienvenida" "video" "recetas" "productos";
+      text-align: center;
+      gap: 20px;
+      padding: 15px; }
+      .bodyInicio .mainInicio #carouselExampleCaptions {
+        display: none; }
+      .bodyInicio .mainInicio #carouselExampleIndicators {
+        display: none; }
+      .bodyInicio .mainInicio #galeria {
+        display: initial; }
+      .bodyInicio .mainInicio .galeriaInicioRecetas {
+        grid-area: recetas; }
+      .bodyInicio .mainInicio .galeriaInicioProductos {
+        grid-area: productos; }
+      .bodyInicio .mainInicio .bienvenida {
+        grid-area: bienvenida; }
+      .bodyInicio .mainInicio .imagenesInicio {
+        display: flex;
+        flex-direction: row;
+        gap: 10px; }
+        .bodyInicio .mainInicio .imagenesInicio img {
+          width: 200px;
+          height: 290px; }
+      .bodyInicio .mainInicio .videoInicio {
+        grid-area: video; }
+        .bodyInicio .mainInicio .videoInicio iframe {
+          width: 80%;
+          height: 340px; }
+  /* pagina de recetas tablet*/
+  .bodyRecetas {
+    background-image: url("../multimedia/imagenes/fondo-recetas.jpg"); }
+  /* pagina de productos tablet */
+  .bodyProductos {
+    background-image: url("../multimedia/imagenes/fondo-producto.jpg"); }
+  /* pagina de contacto tablet */
+  .bodyContacto {
+    background-image: url("../multimedia/imagenes/fondo-contacto.jpg"); }
+    .bodyContacto .mainContacto {
+      color: white;
+      padding: 28px; }
+      .bodyContacto .mainContacto .pcontacto {
+        background-color: rgba(0, 0, 0, 0.511);
+        font-size: 1rem; }
+      .bodyContacto .mainContacto fieldset {
+        color: white;
+        font-weight: lighter; }
+        .bodyContacto .mainContacto fieldset label {
+          color: black;
+          font-size: 19px; }
+  /* pagina de nosotros tablet */
+  .bodyNosotros {
+    background-image: url("../multimedia/imagenes/fondo-nosotros.jpg"); }
+    .bodyNosotros .mainNosotros {
+      padding: 15px; }
+      .bodyNosotros .mainNosotros .sectionNosotros {
+        display: flex;
+        flex-direction: row;
+        padding: 15px; }
+        .bodyNosotros .mainNosotros .sectionNosotros .descripcion {
+          padding: 10px;
+          text-align: start; } }
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  /* menu principal desktop*/
+  .menu li {
+    padding: 5px 15px;
+    position: relative; }
+    .menu li:hover {
+      background-color: #b95a7a;
+      background-size: cover;
+      border-radius: 10%;
+      margin-bottom: 5px; }
+    .menu li:hover .submenu {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.797);
+      border-radius: 8%; }
+  .menu .submenu {
+    position: absolute;
+    display: none;
+    left: 0;
+    margin-top: 4px; }
+    .menu .submenu li {
+      display: block; }
+  /* pagina de inicio desktop */
+  .bodyInicio .mainInicio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
+    grid-template-areas: ".  ." "bienvenida bienvenida" "recetas    video" "productos  video"; }
+    .bodyInicio .mainInicio .videoInicio {
+      display: flex;
+      align-items: center; }
+    .bodyInicio .mainInicio .imagenesInicio img {
+      transition: all 1s; }
+      .bodyInicio .mainInicio .imagenesInicio img:hover {
+        opacity: 0.7; }
+  /* paginas de recetas y productos */
+  .mainPage {
+    grid-template-rows: 15px 0.1fr 1fr;
+    grid-template-areas: ".      .      ." "titulo titulo titulo" "receta  receta receta"; }
+    .mainPage .tituloPage {
+      grid-area: titulo; }
+    .mainPage .sectionPage {
+      grid-area: receta;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 15px; } }
