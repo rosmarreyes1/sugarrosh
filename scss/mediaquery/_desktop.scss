@@ -6,18 +6,19 @@
         li {
             padding: 5px 15px;
             position: relative;
+            text-align: center;
 
             &:hover {
-                background-color: $colorTitulo;
+                background-color: $colorHover;
                 background-size: cover;
                 border-radius: 10%;
-                margin-bottom: 5px;
             }
 
             &:hover .submenu {
                 display: block;
                 background-color: $bgSubmenu;
                 border-radius: 8%;
+                margin-top: 12rem;
             }
         }
 
@@ -34,52 +35,46 @@
     }
 
     /* pagina de inicio desktop */
-    .bodyInicio {
-        .mainInicio {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
-            grid-template-areas:
-                ".  ."
-                "bienvenida bienvenida"
-                "recetas    video"
-                "productos  video"
-            ;
-    
-            .videoInicio {
-                display: flex;
-                align-items: center;
-            }
-    
-            .imagenesInicio {
-                img {
-                    transition: all 1s;
-    
-                    &:hover {
-                        opacity: 0.7;
-                    }
+    .mainInicio {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr;
+        grid-template-areas:
+            "bienvenida bienvenida"
+            "recetas    video"
+            "productos  video"
+        ;
+
+        .videoInicio {
+            display: flex;
+            align-items: center;
+        }
+
+        .imagenesInicio {
+            img {
+                transition: all 1s;
+
+                &:hover {
+                    opacity: 0.7;
                 }
             }
         }
     }
-
-    /* paginas de recetas y productos */
-    .mainPage {
-        grid-template-rows: 15px 0.1fr 1fr;
-        grid-template-areas: ".      .      ."
-            "titulo titulo titulo"
-            "receta  receta receta"
-        ;
-
-        .tituloPage {
-            grid-area: titulo;
+        /*pagina de productos y recetas tablet*/
+        .mainPage {
+            .sectionPage {
+                article {
+                    @include flexBase (column);
+                    @include FlexAlineacion;
+                    margin: 5px;
+                    width: 80%;
+                    h3{
+                        text-align: center;
+                        text-decoration: underline $colorHover;
+                    }
+                    .containerArticle{
+                        @include flexBase (row);
+                    }
+                }
+            }
         }
-
-        .sectionPage {
-            grid-area: receta;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding: 15px;
-        }
-    }
 }

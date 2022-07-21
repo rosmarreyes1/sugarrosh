@@ -1,0 +1,42 @@
+-keywords agregadas:
+
+*inicio: sugar, rosh, recetas, recetario, postres, batidoras, moldes
+
+*recetas: sugar, rosh, recetas, brownie, pancakes, arandanos, nueces, galletas, chocolate
+
+*productos: sugar, rosh, venta, productos, batidora, moldes silicona, medidores, reposteria
+
+*contacto: contacto, sugar, rosh, informacion, reclamos
+
+*nosotros: nosotros, sugar, rosh, mision, vision
+
+
+
+-description agregadas:
+
+*inicio:Sugar Rosh, tu mejor guia de reposteria, con las mas deliciosas recetas y los mejores productos de primera calidad, siempre pensando en ti!
+
+*recetas: Sugar Rosh, estas pensando en unos deliciosos brownies? pancakes? galletitas? encontraste el espacio ideal.
+
+*productos:Sugar Rosh, tu mejor aliado en reposteria con productos de primera calidad a tu disposicion.
+
+*contacto: En Sugar Rosh tu opinion nos importa y nos ayuda a crecer, llena el formulario y en breve estaremos respondiendo todas tus consultas
+
+*nosotros :Sugar Rosh, te contamos un poco mas de estos humilde servidores,
+
+
+
+-title agregados: 
+
+*inicio:Sugar Rosh
+
+*recetas: Recetas Sugar Rosh
+
+*productos: Productos Sugar Rosh
+
+*contacto: Contacto Sugar Rosh
+
+*nosotros: Nosotros Sugar Rosh
+
+
+-alt agregados en todas las imagenes

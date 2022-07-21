@@ -1,17 +1,9 @@
-.bodyProductos {
-    background-image: url("../multimedia/imagenes/fondo\ productos\ mobile.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    .sectionPage {
+.sectionProductos{
+    @include flexBase (column);
+    @include FlexAlineacion;
+    gap: 1rem;
+    article {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        .detalle {
-            background-color: $bgDetalle;
-        }
+        @include FlexAlineacion;
     }
 }

@@ -3,5 +3,9 @@ body {
     height: 100vh;
     font-family: $fontBody;
     color: $colorBody;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+        "main"
+        "footer";
 }
-

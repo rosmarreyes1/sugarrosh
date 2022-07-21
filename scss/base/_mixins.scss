@@ -1,0 +1,15 @@
+@mixin flexBase ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin FlexAlineacion {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bordeImagenes {
+    border: 6px solid;
+    border-color: $colorHover;
+    border-style: outset;
+}

@@ -1,18 +1,31 @@
-.bodyRecetas {
-    background-image: url("../multimedia/imagenes/fondo\ recetas\ mobile.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    .sectionPage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        .detalle {
-            background-color: $bgDetalle;
+    .mainPage {
+        @include flexBase (column);
+        @include FlexAlineacion;
+        background-image: url("../multimedia/imagenes/fondo-recetas.jpg");
+        background-attachment: fixed;
+        background-size:cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        .tituloPage{
+            margin-top: 2rem;
+        }
+        .sectionPage{
+            @include flexBase (column);
+            @include FlexAlineacion;
+            gap: 4rem;
+            margin: 2px;
+            article{
+                background-color: $colorSubmenu;
+                padding: 15px;
+                @extend .border;
+                .containerArticle{
+                    @include flexBase (column);
+                    @include FlexAlineacion;
+                    text-align: justify;
+                    div{
+                        margin: 5px;
+                    }
+                }
+            }
         }
     }
-}
-

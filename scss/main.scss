@@ -3,9 +3,13 @@
 
 @import "base/reset";
 @import "base/variable";
+@import "base/extend";
+@import "base/map";
+@import "base/mixins";
 
-@import "layout/body";
 @import "layout/header";
+@import "layout/body";
+@import "layout/mainContainer";
 @import "layout/footer";
 
 

@@ -1,0 +1,12 @@
+$redes: (
+    facebook: #3a5795,
+    twitter: #55acee,
+    instagram: #b43a98 
+    );
+
+@each $redSocial ,$color in $redes {
+    .#{$redSocial} {
+        background-color: $color;
+        margin: 1rem;
+    }
+}

@@ -1,42 +1,31 @@
 
 /*titulo principal de la pagina*/
 header {
+    grid-area: header;
     background-color: $bgPrincipal;
-    display: flex;
-    flex-direction: column;
-    height: 165px;
-    .titulo {
-        font-family: $fontPrincipal;
-        font-size: 4rem;
-        text-shadow: 0.7px 0px 0px $colorBordeT,
-            0px 0.7px 0px $colorBordeT,
-            -0.7px 0px 0px $colorBordeT,
-            0px -0.7px 0px $colorBordeT;
+    height: 250px;
     
-        a {
-            text-decoration: none;
-            color: $colorTitulo;
-            font-weight: bold;
-        }
+    .logo-mobile{
+        display: flex;
+        justify-content: center;
+
     }
     .menu {
         ul {
-            display: flex;
-            flex-direction: row;
+            @include flexBase (row);
             font-size: 1rem;
             list-style: none;
             gap: 15px;
-    
+            .logo-tablet{
+                display: none;
+            }
             a {
                 text-decoration: none;
-                color: $colorBody;
+                color: $colorSubmenu;
             }
             .submenu {
                 display: none; 
             }
-        }
-        .navbar-toggler {
-            background-color: $bgFooter;
         }
     }
 }
