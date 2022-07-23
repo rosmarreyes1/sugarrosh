@@ -17,7 +17,7 @@
             article{
                 background-color: $colorSubmenu;
                 padding: 15px;
-                @extend .border;
+                @extend %border;
                 .containerArticle{
                     @include flexBase (column);
                     @include FlexAlineacion;

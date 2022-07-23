@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@include responsive(tablet) {
 
     /*menu tablet */
     header {
@@ -21,7 +21,7 @@
                     display: flex;
                     align-items: center;
                     height: fit-content;
-                    margin-top: 8%;
+                    margin-top: 12%;
                 }
             }
         }
@@ -29,86 +29,111 @@
 
     /* pagina de inicio tablet*/
     .mainInicio {
-        display: grid;
-        grid-template-areas:
-            "bienvenida"
-            "video"
-            "recetas"
-            "productos";
-        text-align: center;
-        gap: 20px;
-        margin: 0;
-
-        #carouselExampleCaptions {
+        .carouselMobile{
+        display: none;
+            .carousel{
             display: none;
-        }
-
-        #carouselExampleIndicators {
-            display: none;
+            }
         }
 
         #galeria {
             display: initial;
         }
-
-        .galeriaInicioRecetas {
-            grid-area: recetas;
-            img {
-                @include bordeImagenes;
-            }
+        h1{
+        font-size: 3.5rem;
         }
-
-        .galeriaInicioProductos {
-            grid-area: productos;
-            img {
-                @include bordeImagenes;
-            }
+        h2{
+        font-size: 2.8rem;
         }
+        display: grid;
+        grid-template-areas:
+            "bienvenida"
+            "beneficios"
+            "recetas"
+            "video"
+            "productos";          
 
         .bienvenida {
             grid-area: bienvenida;
+            height: 18rem;
+            .contenedor {
+                width: 100%;
+                h1 {
+                font-size: 3.8rem;
+                }
+                p{
+                font-size: 1.6rem;
+                }
+            }
+        }
+        .beneficios {
+            grid-area: beneficios;
+            background-color: $bgSecundario;
+            margin: 0;
+            .descriptionBeneficios{
+                width: 70%;
+                p{
+                    font-size: 1.4rem;
+                }
+
+            }
         }
 
-        .bienvenida {
-            background-image: url("../multimedia/imagenes/fondo.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 20rem;
-
-            .contenedor {
+        .galeriaInicioRecetas {
+            grid-area: recetas;
+            .containerRecetas{
                 @include flexBase (column);
                 @include FlexAlineacion;
-                height: 100%;
-
-                h1 {
-                    font-family: $fontPrincipal;
-                    font-size: 4rem;
-                    text-shadow: 2px 0px 0px $colorBordeT,
-                        0px 2px 0px $colorBordeT,
-                        -2px 0px 0px $colorBordeT,
-                        0px -2px 0px $colorBordeT;
+                gap: 3rem;
+                height: 100vh;
+                .descriptionRecetas {
+                    width: 70%;
+                    p{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .galeriaInicioProductos {
+            grid-area: productos;
+            .containerProductos{
+                @include flexBase (column);
+                @include FlexAlineacion;
+                height: 100vh;
+                gap: 3rem;
+                .descriptionProductos {
+                    width: 70%;
+                    p{
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
 
         .imagenesInicio {
             @include flexBase (row);
-            gap: 1rem;
+            gap: 2rem;
 
             img {
-                width: 200px;
-                height: 290px;
+                @include bordeImagenes;
+                width: 230px;
+                height: 270px;
+                border-radius: 100%;
             }
         }
 
         .videoInicio {
+            background-color: $bgSecundario;
             grid-area: video;
-
             iframe {
                 width: 80%;
                 height: 340px;
+            }
+            .descriptionVideo{
+                width: 70%;
+                p {
+                    font-size: 1.3rem;
+                }
             }
         }
     }

@@ -11,5 +11,5 @@
 @mixin bordeImagenes {
     border: 6px solid;
     border-color: $colorHover;
-    border-style: outset;
+    border-style: double;
 }

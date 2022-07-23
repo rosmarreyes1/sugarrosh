@@ -1,12 +1,17 @@
-$redes: (
-    facebook: #3a5795,
-    twitter: #55acee,
-    instagram: #b43a98 
-    );
+$breakpoints: (
+    tablet:768px,
+    desktop:1024px,
+);
 
-@each $redSocial ,$color in $redes {
-    .#{$redSocial} {
-        background-color: $color;
-        margin: 1rem;
+
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $valor: map-get($breakpoints, $breakpoint);
+
+        @media screen and (min-width: $valor) {
+            @content;
+        }
     }
+
+    @warn "Unknown '#{$breakpoint}' in $breakpoints";
 }

@@ -1,12 +1,86 @@
 .mainInicio{
-    margin: 1rem;
-    iframe {
-        width: 100%;
-        height: 230px;
-    }
-
     #galeria {
         display: none;
     }
-
+    .bienvenida {
+        @include flexBase (column);
+        @include FlexAlineacion;
+        background-image: url("../multimedia/imagenes/fondo.jpg");
+        background-attachment: fixed;
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        .contenedor {
+            @include flexBase (column);
+            @include FlexAlineacion;
+            width: 80%;
+            h1 {
+                font-family: $fontPrincipal;
+                font-size: 3rem;
+                text-shadow: 2px 0px 0px $colorBordeT,
+                0px 2px 0px $colorBordeT,
+                -2px 0px 0px $colorBordeT,
+                0px -2px 0px $colorBordeT;
+                text-decoration: none;
+            }
+            p{
+                font-weight: bold;
+                text-shadow: 1px 0px 0px $colorSubmenu,
+                0px 1px 0px $colorSubmenu,
+                -1px 0px 0px $colorSubmenu,
+                0px -1px 0px $colorSubmenu;
+            }
+        }
+    }
+    .beneficios{
+        @include flexBase (column);
+        @include FlexAlineacion;
+        height: 100vh;
+        margin: 1rem;
+        .containerBeneficios {
+            @include flexBase (column);
+            @include FlexAlineacion;
+            gap: 2rem;
+            img{
+            width: 95%;
+            }
+            .descriptionBeneficios{
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .carouselMobile{
+        @include flexBase (column);
+        @include FlexAlineacion;
+        background-color: $bgSecundario;
+        height: 100vh;
+        gap: 2rem;
+        padding: 1.5rem;
+        .carousel{
+            width: 88%;
+        }
+    }
+    .videoInicio {
+        @include flexBase (column);
+        @include FlexAlineacion;
+        height: 100vh;
+        padding: 1rem;
+        gap: 1rem;
+        iframe {
+            width: 100%;
+            height: 300px;
+        }
+        .descriptionVideo{
+            text-align: justify;
+            h3{
+                text-align: center;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
 }

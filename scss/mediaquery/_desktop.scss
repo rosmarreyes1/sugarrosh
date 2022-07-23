@@ -1,35 +1,27 @@
 /* desktop */
-@media screen and (min-width: 1024px) {
+@include responsive(desktop) {
 
     /* menu principal desktop*/
     .menu {
         li {
-            padding: 5px 15px;
+            padding:5px 15px;
             position: relative;
             text-align: center;
-
-            &:hover {
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
                 background-color: $colorHover;
-                background-size: cover;
-                border-radius: 10%;
+                transform-origin: bottom;
+                transition: transform 0.25s ease-out;
             }
-
-            &:hover .submenu {
-                display: block;
-                background-color: $bgSubmenu;
-                border-radius: 8%;
-                margin-top: 12rem;
-            }
-        }
-
-        .submenu {
-            position: absolute;
-            display: none;
-            left: 0;
-            margin-top: 4px;
-
-            li {
-                display: block;
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom;
             }
         }
     }
@@ -37,17 +29,31 @@
     /* pagina de inicio desktop */
     .mainInicio {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr 1fr;
         grid-template-areas:
             "bienvenida bienvenida"
-            "recetas    video"
-            "productos  video"
+            "beneficios beneficios"
+            "recetas recetas"
+            "video video"
+            "productos productos"
         ;
 
-        .videoInicio {
-            display: flex;
-            align-items: center;
+        .bienvenida {
+            height: 100vh;
         }
+
+        .beneficios {
+            height: 100vh;
+            gap: 3rem;
+        }
+
+        .videoInicio {
+            @include flexBase (column);
+            @include FlexAlineacion;
+                iframe {
+                    width: 50%;
+                    height: 340px;
+                }
+            }
 
         .imagenesInicio {
             img {
@@ -59,22 +65,25 @@
             }
         }
     }
-        /*pagina de productos y recetas tablet*/
-        .mainPage {
-            .sectionPage {
-                article {
-                    @include flexBase (column);
-                    @include FlexAlineacion;
-                    margin: 5px;
-                    width: 80%;
-                    h3{
-                        text-align: center;
-                        text-decoration: underline $colorHover;
-                    }
-                    .containerArticle{
-                        @include flexBase (row);
-                    }
+
+    /*pagina de productos y recetas tablet*/
+    .mainPage {
+        .sectionPage {
+            article {
+                @include flexBase (column);
+                @include FlexAlineacion;
+                margin: 5px;
+                width: 80%;
+
+                h3 {
+                    text-align: center;
+                    text-decoration: underline $colorHover;
+                }
+
+                .containerArticle {
+                    @include flexBase (row);
                 }
             }
         }
+    }
 }

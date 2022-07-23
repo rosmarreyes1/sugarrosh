@@ -1,5 +1,6 @@
-.border {
+%border {
     border: 3px solid;
     border-color: $colorHover;
+    border-style: outset;
     border-radius: 20px;
 }

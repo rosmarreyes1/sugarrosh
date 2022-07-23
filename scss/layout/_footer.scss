@@ -3,9 +3,10 @@ footer {
     @include FlexAlineacion;
     background-color: $bgPrincipal;
     font-size: 1rem;
-    margin-top: 2rem;
+    padding: 1rem;
 
     .footerContainer {
         @include flexBase (row);
+        gap: 10px;
     }
 }
