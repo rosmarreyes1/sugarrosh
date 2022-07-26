@@ -18,25 +18,18 @@
             h1 {
                 font-family: $fontPrincipal;
                 font-size: 3rem;
-                text-shadow: 2px 0px 0px $colorBordeT,
-                0px 2px 0px $colorBordeT,
-                -2px 0px 0px $colorBordeT,
-                0px -2px 0px $colorBordeT;
+                @include sombraLetras ($colorBordeT);
                 text-decoration: none;
             }
             p{
                 font-weight: bold;
-                text-shadow: 1px 0px 0px $colorSubmenu,
-                0px 1px 0px $colorSubmenu,
-                -1px 0px 0px $colorSubmenu,
-                0px -1px 0px $colorSubmenu;
+                @include sombraLetrasFino ($colorSubmenu);
             }
         }
     }
     .beneficios{
         @include flexBase (column);
         @include FlexAlineacion;
-        height: 100vh;
         margin: 1rem;
         .containerBeneficios {
             @include flexBase (column);
@@ -47,7 +40,7 @@
             }
             .descriptionBeneficios{
                 p{
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -56,7 +49,6 @@
         @include flexBase (column);
         @include FlexAlineacion;
         background-color: $bgSecundario;
-        height: 100vh;
         gap: 2rem;
         padding: 1.5rem;
         .carousel{
@@ -66,7 +58,6 @@
     .videoInicio {
         @include flexBase (column);
         @include FlexAlineacion;
-        height: 100vh;
         padding: 1rem;
         gap: 1rem;
         iframe {

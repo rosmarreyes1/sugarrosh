@@ -13,3 +13,21 @@
     border-color: $colorHover;
     border-style: double;
 }
+
+@mixin sombraLetras ($color) {
+    text-shadow: 2px 0px 0px $color,
+                0px 2px 0px $color,
+                -2px 0px 0px $color,
+                0px -2px 0px $color;
+}
+
+@mixin sombraLetrasFino ($color) {
+    text-shadow: 1px 0px 0px $color,
+                0px 1px 0px $color,
+                -1px 0px 0px $color,
+                0px -1px 0px $color;
+}
+
+@mixin paddingInicio {
+    padding: 2rem 0;
+}

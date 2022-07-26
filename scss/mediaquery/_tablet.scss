@@ -70,6 +70,7 @@
             grid-area: beneficios;
             background-color: $bgSecundario;
             margin: 0;
+            padding: 2rem 0;
             .descriptionBeneficios{
                 width: 70%;
                 p{
@@ -81,11 +82,11 @@
 
         .galeriaInicioRecetas {
             grid-area: recetas;
+            @include paddingInicio;
             .containerRecetas{
                 @include flexBase (column);
                 @include FlexAlineacion;
                 gap: 3rem;
-                height: 100vh;
                 .descriptionRecetas {
                     width: 70%;
                     p{
@@ -96,10 +97,10 @@
         }
         .galeriaInicioProductos {
             grid-area: productos;
+            @include paddingInicio;
             .containerProductos{
                 @include flexBase (column);
                 @include FlexAlineacion;
-                height: 100vh;
                 gap: 3rem;
                 .descriptionProductos {
                     width: 70%;
@@ -113,7 +114,6 @@
         .imagenesInicio {
             @include flexBase (row);
             gap: 2rem;
-
             img {
                 @include bordeImagenes;
                 width: 230px;
@@ -125,6 +125,7 @@
         .videoInicio {
             background-color: $bgSecundario;
             grid-area: video;
+            @include paddingInicio;
             iframe {
                 width: 80%;
                 height: 340px;

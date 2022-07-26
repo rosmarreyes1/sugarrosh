@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="sugar, rosh, recetas, brownie, pancakes, arandanos, nueces, galletas, chocolate">
     <meta name="description" content="Sugar Rosh, estas pensando en unos deliciosos brownies? pancakes? galletitas? encontraste el espacio ideal.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../multimedia/imagenes/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -32,19 +32,9 @@
                     <ul class="navbar-nav mb-2 mb-md-0">
                         <li class="recetas nav-item">
                             <a class="nav-link active" href="./recetas.html">RECETAS</a>
-                            <ul class="submenu">
-                                <li><a href="./recetas.html">Brownie</a></li>
-                                <li><a href="./recetas.html">Pancakes</a></li>
-                                <li><a href="./recetas.html">Galletitas</a></li>
-                            </ul>
                         </li>
                         <li class="productos nav-item">
                             <a class="nav-link active" href="./productos.html">PRODUCTOS</a>
-                            <ul class="submenu">
-                                <li><a href="./productos.html">Batidora</a></li>
-                                <li><a href="./productos.html">Moldes</a></li>
-                                <li><a href="./productos.html">Medidores</a></li>
-                            </ul>
                         </li>
                         <div class="logo-tablet">
                             <a href="../index.html"> <img src="../multimedia/imagenes/logo.png"
@@ -68,7 +58,7 @@
                 ti</p>
         </div>
         <section class="sectionPage">
-            <article id="brownie">
+            <article id="brownie" data-aos="fade-up">
                 <h3>Brownie de chocolate con nuez</h3>
                 <div class="containerArticle">
                     <div>
@@ -132,7 +122,7 @@
                     </div>
                 </div>
             </article>
-            <article id="pancake">
+            <article id="pancake" data-aos="fade-up">
                     <h3>Pancakes de Avena y arandanos</h3>
                 <div class="containerArticle">
                 <div>
@@ -181,50 +171,44 @@
                 </div>
             </div>
             </article>
-            <article id="galletitas">
+            <article id="galletitas" data-aos="fade-up">
                 <h3>Galletitas con chispas de chocolate</h3>
                 <div class="containerArticle">
                 <div>
                     <img src="../multimedia/imagenes/recetas-inicio3.jpg" alt="galletas con chispas de chocolate">
                 </div>
                 <div>
-                    <p>Deliciosas galletas con chipas de chocolate, ideales para la merienda o
-                        desayuno.</p>
+                    <p>Deliciosas galletas con chipas de chocolate, ideales para la merienda.</p>
                     <ul>
                         <li>INGREDIENTES</li>
-                        <li>2 tazas harina de trigo</li>
-                        <li>1 cdita de polvo para hornear</li>
-                        <li>1 taza de azúcar (o a gusto)</li>
-                        <li>1/4 mantequilla (125 gr)</li>
-                        <li>1 taza chispas de chocolate</li>
-                        <li>2 huevos</li>
-                        <li>1 cdts esencia de vainilla (o la que se desee)</li>
+                        <li>Bicarbonato de sodio 1/2 cdita.</li>
+                        <li>Sal 1/2 cdita.</li>
+                        <li>Azúcar blanca 1/2 Taza</li>
+                        <li>Azúcar morena 1/2 Taza</li>
+                        <li>Maicena 1 cda.</li>
+                        <li>Chispas de chocolate 1 y 1/2 Taza</li>
+                        <li>Huevo a temperatura ambiente 1 Unidad</li>
+                        <li>Harina común 1 y 1/4 Taza</li>
+                        <li>Extracto de vainilla 1 cdita.</li>
+                        <li>Manteca a temperatura ambiente 113 g</li>
+                        <li>Nueces pecanas tostadas 1 Taza</li>
                     </ul>
                     <div>
                         <h4>PREPARACION:</h4>
                         <ol>
-                            <li>Coloca un colador por encima de un bol, cierne los ingredientes tales como; la harina de
-                                avena, el edulcorante y el polvo para hornear.</li>
-                            <li>Incluye las claras de los huevos, la leche, el edulcorante, la vainilla y la ralladura
-                                de limon mientras vas mezclando continuamente.</li>
-                            <li>Previamente, lava bien los arándanos y agrégalos a la mezcla. Mezcla con suavidad a
-                                partir de este punto.</li>
-                            <li>Escoge una sartén antiadherente para evitar engrasar este utensilio, y si es necesario,
-                                procura ser prudente con la cantidad de grasa que utilices.</li>
-                            <li>Una vez calentada la sartén, vierte un ⅓ de mezcla y espárcela a tu gusto. Es
-                                recomendable dejar la temperatura media/alta para una cocción más rápida.</li>
-                            <li>En el momento que las burbujas estén presentes en la mezcla, será el tiempo necesario
-                                para voltear el pancake de arándanos y avena. Utiliza una espátula antiadherente para
-                                ello.</li>
-                            <li>Deja la mezcla unos segundos más y retira el pancake ya cocido a un recipiente y repite
-                                el paso de cocción con el resto de la preparación.</li>
-                            <li>Una vez terminada la preparación, sirve estos pancakes calientitos…</li>
+                            <li>Mezclar la manteca con el azúcar blanco y el azúcar moreno hasta conseguir una estructura bien cremosa que será lo que le va dará estructura a las galletas.</li>
+                            <li>Añadir el huevo a la mezcla.</li>
+                            <li>Incorporar la vainilla y mezclar bien.</li>
+                            <li>Tamizar los ingredientes secos : la harina, la maicena, el bicarbonato y la sal.</li>
+                            <li>Añadir a la mezcla de mantequilla y azúcar y remover hasta que esté todo integrado.</li>
+                            <li>Añadir las pepitas de chocolate y las nueces cortadas y con ayuda de dos cucharas tomar porciones de masa y hacer una bola.  Dar forma de galleta a cada una y las reservar en la heladera durante 1 hora.</li>
+                            <li>Colocar las galletas en una placa y llevar a un horno precalentado a 170º C durante 15-18 minutos o hasta que sus bordes estén dorados.</li>
+                            <li>Dejar enfriar y servir.</li>
                         </ol>
-                        <p>Los pancakes con arándanos y avena fáciles y rápidos están ¡LISTOS! Disfruta de este
-                            delicioso y nutritivo desayuno en familia.</p>
+                        <p>Las galletitas con chispas de chocolate están ¡LISTAS! Disfruta de este
+                            delicioso postre en familia.</p>
                         <h4>NOTA:</h4>
-                        <p>Para una mejor experiencia sirvelos acompañados con miel para aprovechar la explosión de
-                            sabores, que esta receta expulsa.</p>
+                        <p>Para una mejor experiencia sirvelos acompañadas con leche y disfruta de esta mezcla de sabores!</p>
                     </div>
                 </div>
             </div>
@@ -257,6 +241,10 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
     </script>
 </body>
 

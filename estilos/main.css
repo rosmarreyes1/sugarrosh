@@ -8,7 +8,7 @@
 /* fin del reseteo */
 .mainPage .sectionPage article {
   border: 3px solid;
-  border-color: #ff6781;
+  border-color: #ea899a;
   border-style: outset;
   border-radius: 20px; }
 
@@ -29,7 +29,6 @@ header {
     header .menu ul .logo-tablet {
       display: none; }
     header .menu ul a {
-      text-decoration: none;
       color: white; }
     header .menu ul .submenu {
       display: none; }
@@ -47,7 +46,7 @@ main {
   grid-area: main;
   text-align: center; }
   main p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 95%; }
   main h1 {
     text-decoration: underline pink 5px;
@@ -105,7 +104,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 1rem; }
   .mainInicio .beneficios .containerBeneficios {
     display: flex;
@@ -116,7 +114,7 @@ footer {
     .mainInicio .beneficios .containerBeneficios img {
       width: 95%; }
     .mainInicio .beneficios .containerBeneficios .descriptionBeneficios p {
-      font-size: 1.5rem; }
+      font-size: 1.2rem; }
 
 .mainInicio .carouselMobile {
   display: flex;
@@ -124,7 +122,6 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #ffeaed;
-  height: 100vh;
   gap: 2rem;
   padding: 1.5rem; }
   .mainInicio .carouselMobile .carousel {
@@ -135,7 +132,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 1rem;
   gap: 1rem; }
   .mainInicio .videoInicio iframe {
@@ -159,14 +155,21 @@ footer {
   background-position: right;
   background-repeat: no-repeat; }
   .mainPage .tituloPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem; }
+    .mainPage .tituloPage p {
+      text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white;
+      font-weight: bold; }
   .mainPage .sectionPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin: 2px; }
+    margin: 2.5px; }
     .mainPage .sectionPage article {
       background-color: white;
       padding: 15px; }
@@ -184,11 +187,33 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem; }
+  gap: 1rem;
+  padding: 1rem; }
   .sectionProductos article {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .sectionProductos article .card-body h3 {
+      text-decoration: underline #ea899a; }
+    .sectionProductos article .card-body p {
+      font-size: 1.2rem;
+      text-align: justify; }
+    .sectionProductos article .compra {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px; }
+      .sectionProductos article .compra button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: fit-content;
+        background-color: #ffeaed;
+        border-radius: 8px;
+        border-color: #ea899a;
+        padding: 0 5px; }
 
 .mainContacto {
   display: flex;
@@ -256,32 +281,33 @@ footer {
     .mainInicio .beneficios {
       grid-area: beneficios;
       background-color: #ffeaed;
-      margin: 0; }
+      margin: 0;
+      padding: 2rem 0; }
       .mainInicio .beneficios .descriptionBeneficios {
         width: 70%; }
         .mainInicio .beneficios .descriptionBeneficios p {
           font-size: 1.4rem; }
     .mainInicio .galeriaInicioRecetas {
-      grid-area: recetas; }
+      grid-area: recetas;
+      padding: 2rem 0; }
       .mainInicio .galeriaInicioRecetas .containerRecetas {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
-        height: 100vh; }
+        gap: 3rem; }
         .mainInicio .galeriaInicioRecetas .containerRecetas .descriptionRecetas {
           width: 70%; }
           .mainInicio .galeriaInicioRecetas .containerRecetas .descriptionRecetas p {
             font-size: 1.4rem; }
     .mainInicio .galeriaInicioProductos {
-      grid-area: productos; }
+      grid-area: productos;
+      padding: 2rem 0; }
       .mainInicio .galeriaInicioProductos .containerProductos {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
         gap: 3rem; }
         .mainInicio .galeriaInicioProductos .containerProductos .descriptionProductos {
           width: 70%; }
@@ -293,14 +319,15 @@ footer {
       gap: 2rem; }
       .mainInicio .imagenesInicio img {
         border: 6px solid;
-        border-color: #ff6781;
+        border-color: #ea899a;
         border-style: double;
         width: 230px;
         height: 270px;
         border-radius: 100%; }
     .mainInicio .videoInicio {
       background-color: #ffeaed;
-      grid-area: video; }
+      grid-area: video;
+      padding: 2rem 0; }
       .mainInicio .videoInicio iframe {
         width: 80%;
         height: 340px; }
@@ -355,7 +382,7 @@ footer {
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: #ff6781;
+      background-color: #ea899a;
       transform-origin: bottom;
       transition: transform 0.25s ease-out; }
     .menu li:hover::after {
@@ -392,7 +419,7 @@ footer {
     width: 80%; }
     .mainPage .sectionPage article h3 {
       text-align: center;
-      text-decoration: underline #ff6781; }
+      text-decoration: underline #ea899a; }
     .mainPage .sectionPage article .containerArticle {
       display: flex;
       flex-direction: row; } }

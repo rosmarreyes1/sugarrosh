@@ -7,13 +7,19 @@
         background-position: right;
         background-repeat: no-repeat;
         .tituloPage{
+            @include flexBase (column);
+            @include FlexAlineacion;
             margin-top: 2rem;
+            p{
+            @include sombraLetrasFino ($colorSubmenu);
+            font-weight: bold;
+            }
         }
         .sectionPage{
             @include flexBase (column);
             @include FlexAlineacion;
             gap: 4rem;
-            margin: 2px;
+            margin: 2.5px;
             article{
                 background-color: $colorSubmenu;
                 padding: 15px;

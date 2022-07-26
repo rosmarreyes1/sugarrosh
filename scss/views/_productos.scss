@@ -2,8 +2,35 @@
     @include flexBase (column);
     @include FlexAlineacion;
     gap: 1rem;
+    padding: 1rem;
     article {
         display: flex;
         @include FlexAlineacion;
+        .card-body {
+            h3 {
+                text-decoration: underline $colorHover;
+            }
+            p{
+                font-size: 1.2rem;
+                text-align: justify;
+            }
+            
+        }
+        .compra{
+            display: flex;
+            @include FlexAlineacion;
+            padding: 5px;
+            button {
+                @include flexBase (row);
+                @include FlexAlineacion;
+                gap: 5px;
+                width: fit-content;
+                background-color: $bgSecundario;
+                border-radius: 8px;
+                border-color: $colorHover;
+                padding: 0 5px;
+            }
+        }
     }
 }
+
