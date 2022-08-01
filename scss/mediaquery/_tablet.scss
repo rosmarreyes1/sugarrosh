@@ -12,6 +12,8 @@
         .menu {
             ul {
                 font-size: 1.2rem;
+                background-color: $bgPrincipal;
+                margin-top: 0;
 
                 .logo-tablet {
                     display: initial;
@@ -21,7 +23,6 @@
                     display: flex;
                     align-items: center;
                     height: fit-content;
-                    margin-top: 12%;
                 }
             }
         }
@@ -120,6 +121,10 @@
                 height: 270px;
                 border-radius: 100%;
             }
+            h3{
+                font-style: italic;
+                font-weight:500;
+            }
         }
 
         .videoInicio {
@@ -143,8 +148,8 @@
     .mainPage {
         .sectionPage {
             margin: 20px;
-        }
     }
+}
 
     /*pagina de productos*/
     .sectionProductos {
@@ -175,15 +180,23 @@
 
     /* pagina de nosotros tablet */
     .mainNosotros {
-        padding: 15px;
-
+        p{
+            font-size: 1.2rem;
+        }
         .sectionNosotros {
-            @include flexBase(row);
-            padding: 15px;
+            @include flexBase(column);
+            img{
+                width: initial;
+            }
 
             .descripcion {
-                padding: 10px;
                 text-align: start;
+                h3{
+                text-align: center;
+                }
+                p{
+                    font-size: 1.1rem;
+                }
             }
         }
     }

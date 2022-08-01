@@ -11,8 +11,10 @@
             @include FlexAlineacion;
             margin-top: 2rem;
             p{
-            @include sombraLetrasFino ($colorSubmenu);
+            @include sombraLetrasFino ($colorSombra);
             font-weight: bold;
+            text-align: justify;
+            width: 90%;
             }
         }
         .sectionPage{
@@ -21,15 +23,29 @@
             gap: 4rem;
             margin: 2.5px;
             article{
-                background-color: $colorSubmenu;
+                background-color: $colorSombra;
                 padding: 15px;
                 @extend %border;
+                h3 {
+                    font-family: $fontPrincipal;
+                    font-size: 2rem;
+                }
+                a{
+                    display: flex;
+                    justify-content: end;
+                    color: $colorHover;
+                    font-weight: 600;
+                }
                 .containerArticle{
                     @include flexBase (column);
                     @include FlexAlineacion;
                     text-align: justify;
                     div{
                         margin: 5px;
+                        h4{
+                            color: $colorHover;
+                            font-weight: bolder;
+                        }
                     }
                 }
             }

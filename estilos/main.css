@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box; }
 
 /* fin del reseteo */
-.mainPage .sectionPage article {
+.mainPage .sectionPage article, .mainNosotros .sectionNosotros img {
   border: 3px solid;
   border-color: #ea899a;
   border-style: outset;
@@ -15,28 +15,27 @@
 /*titulo principal de la pagina*/
 header {
   grid-area: header;
-  background-color: pink;
-  height: 280px; }
+  background-color: pink; }
   header .logo-mobile {
     display: flex;
     justify-content: center; }
   header .menu ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ea899a;
     font-size: 1rem;
-    list-style: none;
-    gap: 15px; }
+    gap: 15px;
+    margin-top: 5px;
+    border-radius: 20px; }
     header .menu ul .logo-tablet {
-      display: none; }
-    header .menu ul a {
-      color: white; }
-    header .menu ul .submenu {
       display: none; }
 
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Oswald", sans-serif;
+  font-family: "Cabin Condensed", sans-serif;
   color: black;
   display: grid;
   grid-template-columns: 1fr;
@@ -104,7 +103,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem; }
+  margin: 1.2rem;
+  height: 650px;
+  padding: 1rem; }
+  .mainInicio .beneficios h2 {
+    font-size: 2.3rem;
+    padding-top: 1rem; }
   .mainInicio .beneficios .containerBeneficios {
     display: flex;
     flex-direction: column;
@@ -114,7 +118,10 @@ footer {
     .mainInicio .beneficios .containerBeneficios img {
       width: 95%; }
     .mainInicio .beneficios .containerBeneficios .descriptionBeneficios p {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      text-align: justify; }
+    .mainInicio .beneficios .containerBeneficios .descriptionBeneficios h3 {
+      font-style: italic; }
 
 .mainInicio .carouselMobile {
   display: flex;
@@ -123,9 +130,14 @@ footer {
   align-items: center;
   background-color: #ffeaed;
   gap: 2rem;
-  padding: 1.5rem; }
+  padding: 2rem; }
+  .mainInicio .carouselMobile h2 {
+    padding-top: 1rem 0;
+    font-size: 2.2rem; }
+  .mainInicio .carouselMobile p {
+    text-align: justify; }
   .mainInicio .carouselMobile .carousel {
-    width: 88%; }
+    width: 89%; }
 
 .mainInicio .videoInicio {
   display: flex;
@@ -162,7 +174,9 @@ footer {
     margin-top: 2rem; }
     .mainPage .tituloPage p {
       text-shadow: 1px 0px 0px white, 0px 1px 0px white, -1px 0px 0px white, 0px -1px 0px white;
-      font-weight: bold; }
+      font-weight: bold;
+      text-align: justify;
+      width: 90%; }
   .mainPage .sectionPage {
     display: flex;
     flex-direction: column;
@@ -173,6 +187,14 @@ footer {
     .mainPage .sectionPage article {
       background-color: white;
       padding: 15px; }
+      .mainPage .sectionPage article h3 {
+        font-family: "Ms Madi", cursive;
+        font-size: 2rem; }
+      .mainPage .sectionPage article a {
+        display: flex;
+        justify-content: end;
+        color: #ea899a;
+        font-weight: 600; }
       .mainPage .sectionPage article .containerArticle {
         display: flex;
         flex-direction: column;
@@ -181,6 +203,9 @@ footer {
         text-align: justify; }
         .mainPage .sectionPage article .containerArticle div {
           margin: 5px; }
+          .mainPage .sectionPage article .containerArticle div h4 {
+            color: #ea899a;
+            font-weight: bolder; }
 
 .sectionProductos {
   display: flex;
@@ -221,21 +246,48 @@ footer {
   justify-content: center;
   align-items: center;
   color: black;
-  gap: 7px;
-  margin: 10px; }
+  background-image: url("../multimedia/imagenes/fondo-contacto.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  gap: 7px; }
+  .mainContacto p {
+    width: 100%; }
   .mainContacto fieldset {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: black;
-    font-weight: bold;
-    gap: 5px; }
+    gap: 5px;
+    padding: 10px; }
     .mainContacto fieldset input {
       width: 100%; }
+  .mainContacto .botonEnviar {
+    background-color: #ffeaed;
+    border-color: #ea899a;
+    width: 100px;
+    font-weight: bold; }
 
-.sectionNosotros {
-  display: flex;
-  flex-direction: column; }
+.mainNosotros {
+  padding: 1rem;
+  background-color: #ffeaed; }
+  .mainNosotros p {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0 1rem; }
+  .mainNosotros .sectionNosotros {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; }
+    .mainNosotros .sectionNosotros img {
+      width: 98%; }
+    .mainNosotros .sectionNosotros .descripcion h3 {
+      color: #ea899a;
+      font-weight: bolder; }
+    .mainNosotros .sectionNosotros .descripcion p {
+      text-align: justify;
+      font-size: 1.2rem; }
 
 @media screen and (min-width: 768px) {
   /*menu tablet */
@@ -247,14 +299,15 @@ footer {
     header .logo-mobile {
       display: none; }
     header .menu ul {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      background-color: pink;
+      margin-top: 0; }
       header .menu ul .logo-tablet {
         display: initial; }
       header .menu ul li {
         display: flex;
         align-items: center;
-        height: fit-content;
-        margin-top: 12%; }
+        height: fit-content; }
   /* pagina de inicio tablet*/
   .mainInicio {
     display: grid;
@@ -324,6 +377,9 @@ footer {
         width: 230px;
         height: 270px;
         border-radius: 100%; }
+      .mainInicio .imagenesInicio h3 {
+        font-style: italic;
+        font-weight: 500; }
     .mainInicio .videoInicio {
       background-color: #ffeaed;
       grid-area: video;
@@ -357,15 +413,19 @@ footer {
         color: black;
         font-size: 19px; }
   /* pagina de nosotros tablet */
-  .mainNosotros {
-    padding: 15px; }
-    .mainNosotros .sectionNosotros {
-      display: flex;
-      flex-direction: row;
-      padding: 15px; }
-      .mainNosotros .sectionNosotros .descripcion {
-        padding: 10px;
-        text-align: start; } }
+  .mainNosotros p {
+    font-size: 1.2rem; }
+  .mainNosotros .sectionNosotros {
+    display: flex;
+    flex-direction: column; }
+    .mainNosotros .sectionNosotros img {
+      width: initial; }
+    .mainNosotros .sectionNosotros .descripcion {
+      text-align: start; }
+      .mainNosotros .sectionNosotros .descripcion h3 {
+        text-align: center; }
+      .mainNosotros .sectionNosotros .descripcion p {
+        font-size: 1.1rem; } }
 
 /* desktop */
 @media screen and (min-width: 1024px) {
@@ -410,6 +470,8 @@ footer {
       .mainInicio .imagenesInicio img:hover {
         opacity: 0.7; }
   /*pagina de productos y recetas tablet*/
+  .mainPage .tituloPage p {
+    text-align: center; }
   .mainPage .sectionPage article {
     display: flex;
     flex-direction: column;
@@ -418,8 +480,23 @@ footer {
     margin: 5px;
     width: 80%; }
     .mainPage .sectionPage article h3 {
-      text-align: center;
-      text-decoration: underline #ea899a; }
+      font-size: 2.5rem; }
     .mainPage .sectionPage article .containerArticle {
       display: flex;
-      flex-direction: row; } }
+      flex-direction: row; }
+  /*pagina de nosotros desktop */
+  .mainNosotros p {
+    font-size: 1.2rem;
+    text-align: center; }
+  .mainNosotros .sectionNosotros {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0; }
+    .mainNosotros .sectionNosotros .descripcion {
+      text-align: center;
+      padding: 1rem; }
+      .mainNosotros .sectionNosotros .descripcion h3 {
+        text-align: left; }
+      .mainNosotros .sectionNosotros .descripcion p {
+        width: 80%;
+        font-size: 1.1rem; } }

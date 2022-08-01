@@ -3,7 +3,6 @@
 header {
     grid-area: header;
     background-color: $bgPrincipal;
-    height: 280px;
     
     .logo-mobile{
         display: flex;
@@ -12,18 +11,15 @@ header {
     }
     .menu {
         ul {
-            @include flexBase (row);
+            @include flexBase (column);
+            @include FlexAlineacion;
+            background-color: $colorHover;
             font-size: 1rem;
-            list-style: none;
             gap: 15px;
+            margin-top: 5px;
+            border-radius: 20px;
             .logo-tablet{
                 display: none;
-            }
-            a {
-                color: $colorSubmenu;
-            }
-            .submenu {
-                display: none; 
             }
         }
     }

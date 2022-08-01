@@ -3,17 +3,30 @@
         @include flexBase(column);
         @include FlexAlineacion;
         color: $colorFormulario;
+        background-image: url("../multimedia/imagenes/fondo-contacto.jpg");
+        background-attachment:scroll;
+        background-size:cover;
+        background-position: right;
+        background-repeat: no-repeat;
         gap: 7px;
-        margin: 10px;
+        p{
+            width: 100%;
+        }
         fieldset {
-            @include flexBase(column);
-            align-items: flex-start;
-            color: $colorFormulario;
-            font-weight: bold;
-            gap: 5px;
-            input {
-                width: 100%;
+                @include flexBase(column);
+                align-items: flex-start;
+                color: $colorFormulario;
+                gap: 5px;
+                padding: 10px;
+                input {
+                    width: 100%;
+                }
             }
+        .botonEnviar{
+            background-color: $bgSecundario;
+            border-color: $colorHover;
+            width: 100px;
+            font-weight: bold;
         }
     }
 

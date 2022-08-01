@@ -1,4 +1,27 @@
-
-    .sectionNosotros {
-        @include flexBase (column);
+    .mainNosotros{
+        padding: 1rem;
+        background-color: $bgSecundario;
+        p{
+            font-size: 1.2rem;
+            text-align: left;
+            padding: 0 1rem;
+        }
+        .sectionNosotros {
+            @include flexBase (column);
+            margin: 1rem;
+            img{
+                width: 98%;
+                @extend %border;
+            }
+            .descripcion {
+                h3{
+                    color: $colorHover;
+                    font-weight: bolder;
+                }
+                p{
+                    text-align: justify;
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }

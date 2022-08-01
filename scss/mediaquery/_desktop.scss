@@ -68,20 +68,44 @@
 
     /*pagina de productos y recetas tablet*/
     .mainPage {
+        .tituloPage{
+            p{
+            text-align: center;
+            }
+        }
         .sectionPage {
             article {
                 @include flexBase (column);
                 @include FlexAlineacion;
                 margin: 5px;
                 width: 80%;
-
                 h3 {
-                    text-align: center;
-                    text-decoration: underline $colorHover;
+                    font-size: 2.5rem;
                 }
-
                 .containerArticle {
                     @include flexBase (row);
+                }
+            }
+        }
+    }
+    /*pagina de nosotros desktop */
+    .mainNosotros {
+        p{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .sectionNosotros {
+            @include flexBase(row);
+            padding: 1rem 0;
+            .descripcion {
+                text-align: center;
+                padding: 1rem;
+                h3{
+                text-align: left;
+                }
+                p{
+                    width: 80%;
+                    font-size: 1.1rem;
                 }
             }
         }
